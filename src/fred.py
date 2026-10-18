@@ -29,10 +29,11 @@ def clean_observations(observations):
     return rows
 
 
-observations = fetch_series("UNRATE", "2024-01-01")
-rows = clean_observations(observations)
-print("Clean rows:", len(rows))
-print("Last clean row:", rows[-1])
+if __name__ == "__main__":
+    observations = fetch_series("UNRATE", "2024-01-01")
+    rows = clean_observations(observations)
+    print("Clean rows:", len(rows))
+    print("Last clean row:", rows[-1])
 
 
 
